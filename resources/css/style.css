@@ -1,0 +1,18 @@
+.menuBtn{
+    background-image: url('../images/kiva.png') !important;
+    background-repeat: no-repeat !important;
+    border-radius: 0 !important;
+    width:74px;
+    height:74px;
+    border:none;
+}
+
+.toolbar-administration{
+    background: url('../images/check.png') no-repeat;
+}
+.toolbar-contacts{
+    background: url('../images/new.png') no-repeat;
+}
+.toolbar-groups{
+    background: url('../images/new_list.png') no-repeat;
+}
