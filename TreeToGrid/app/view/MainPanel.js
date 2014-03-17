@@ -12,11 +12,18 @@ Ext.define('TreeToGrid.view.MainPanel', {
         this.items = [{
             xtype:'grid',
             title:'Grid',
-            width:'20%',
+            width:'40%',
             enableDragDrop: true, 
             columns:[
-                {text:'name', dataIndex:'name', width:'50%'},
-                {text:'price', dataIndex:'price', width:'50%'}
+                {text:'name', dataIndex:'name', width:'40%'},
+                {text:'price', dataIndex:'price', width:'40%'},
+                { header: 'Actions',width: '20%', xtype: 'actioncolumn', itemId:'drop',
+                    icon: '../resources/images/delete.png',
+                    tooltip:'Drop',
+                    handler: function(grid, rowIndex, colIndex){
+                        this.fireEvent('dropRecord',grid, rowIndex, colIndex);
+                    }
+                }
             ],
             store:store,
             listeners: {
@@ -29,8 +36,6 @@ Ext.define('TreeToGrid.view.MainPanel', {
                     });
                   }
             }
-            
-            
         }];
         
         this.callParent(arguments);

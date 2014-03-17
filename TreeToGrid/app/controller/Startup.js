@@ -8,8 +8,13 @@ Ext.define('TreeToGrid.controller.Startup', {
     ],
     init: function(){
         this.control({
-            
+            'mainPanel actioncolumn' : {
+                dropRecord : this.drop
+            }
         });
+    },
+    drop: function(grid, rowIndex, colIndex){
+        grid.getStore().removeAt(rowIndex);
     }
     
 
