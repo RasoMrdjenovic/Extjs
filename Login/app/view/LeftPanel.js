@@ -9,6 +9,17 @@ Ext.define('Login.view.LeftPanel', {
     layout:'fit',
     width:'20%',
     split:true,
+    tbar:[
+        {
+            text:'Welcome, Raso'
+        },
+        {
+            xtype: 'button',
+            icon: '../resources/images/logout.png',
+            text:'Logout',
+            action:'logout'
+        }
+    ],
     initComponent: function() {
         var store = Ext.create('Login.store.TreeData');
         this.items = [{

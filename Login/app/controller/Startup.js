@@ -11,6 +11,9 @@ Ext.define('Login.controller.Startup', {
         this.control({
             'loginview button': {
                 signin: this.signinuser
+            },
+            'leftPanel button[action=logout]':{
+                click: this.logout
             }
         });
     },
@@ -36,6 +39,10 @@ Ext.define('Login.controller.Startup', {
 //           },
 //           failure: function(){ Ext.example.msg('Failed!','Some error!'); }
 //         })
+    },
+    logout: function(){
+        this.getViewport().destroy();
+        Ext.create('Login.view.Login');
     }
     
 
