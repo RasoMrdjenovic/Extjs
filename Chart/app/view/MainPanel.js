@@ -1,6 +1,7 @@
 Ext.define('Chart.view.MainPanel', {
     requires:[
-      'Chart.store.Chart'  
+      'Chart.store.Chart',
+      'Chart.store.Years'
     ],
     extend: 'Ext.Panel',
     alias:'widget.mainPanel',
@@ -11,7 +12,8 @@ Ext.define('Chart.view.MainPanel', {
     height:'100%',
     title:'Chart example',
     initComponent: function() {
-        var store = Ext.create('Chart.store.Chart');
+        var store = Ext.create('Chart.store.Chart', 2013);
+        var years = Ext.create('Chart.store.Years');
         var chart = Ext.create('Ext.chart.Chart', {
             style:'display:block; margin: 150 auto',
             width: 1200,
@@ -65,7 +67,22 @@ Ext.define('Chart.view.MainPanel', {
         });
         Ext.apply(this, {
             items: [
-               chart
+                {
+                    xtype:'combo',
+                    editable: false,
+                    allowBlank:false,
+                    action:'changeYear',
+                    width:300,
+                    margin:'30 50%',
+                    queryMode: 'local',
+                    displayField: 'year',
+                    valueField: 'year',
+                    fieldLabel:'Year:',
+                    labelWidth:50,
+                    store:years,
+                    emptyText:'Choose year'
+                },
+                chart
             ]
         });
         this.callParent(arguments);
