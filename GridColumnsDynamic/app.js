@@ -1,5 +1,5 @@
 Ext.application({
-    name: 'TreeToGrid',
+    name: 'GridColumnsDynamic',
     autoCreateViewport: true,
     controllers: ['Startup']
 });

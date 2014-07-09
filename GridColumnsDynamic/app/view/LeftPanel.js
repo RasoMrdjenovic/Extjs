@@ -1,6 +1,6 @@
-Ext.define('TreeToGrid.view.LeftPanel', {
+Ext.define('GridColumnsDynamic.view.LeftPanel', {
     requires:[
-        'TreeToGrid.store.TreeData'
+        'GridColumnsDynamic.store.TreeData'
     ],
     extend: 'Ext.Panel',
     alias:'widget.leftPanel',
@@ -10,7 +10,7 @@ Ext.define('TreeToGrid.view.LeftPanel', {
     width:'20%',
     split:true,
     initComponent: function() {
-        var store = Ext.create('TreeToGrid.store.TreeData');
+        var store = Ext.create('GridColumnsDynamic.store.TreeData');
         this.items = [{
               xtype:'treepanel',
               title:'Tree',

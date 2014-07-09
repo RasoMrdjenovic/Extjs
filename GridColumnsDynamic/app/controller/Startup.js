@@ -1,4 +1,4 @@
-Ext.define('TreeToGrid.controller.Startup', {
+Ext.define('GridColumnsDynamic.controller.Startup', {
     extend: 'Ext.app.Controller',
     views: ['Viewport','MainPanel','LeftPanel'],
     refs: [

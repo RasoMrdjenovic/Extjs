@@ -1,4 +1,4 @@
-Ext.define('TreeToGrid.store.GridData', {
+Ext.define('GridColumnsDynamic.store.GridData', {
     extend: 'Ext.data.Store',
     fields:[
         'name','price'

@@ -1,7 +1,7 @@
-Ext.define('TreeToGrid.view.MainPanel', {
+Ext.define('GridColumnsDynamic.view.MainPanel', {
     requires:[
-      'TreeToGrid.store.GridData', 
-      'TreeToGrid.store.ColumnStore',
+      'GridColumnsDynamic.store.GridData', 
+      'GridColumnsDynamic.store.ColumnStore',
     ],
     extend: 'Ext.Panel',
     alias:'widget.mainPanel',
@@ -9,8 +9,8 @@ Ext.define('TreeToGrid.view.MainPanel', {
     region:'center',
     split:true,
     initComponent: function() {
-        var store = Ext.create('TreeToGrid.store.GridData');
-        var columns = Ext.create('TreeToGrid.store.ColumnStore');
+        var store = Ext.create('GridColumnsDynamic.store.GridData');
+        var columns = Ext.create('GridColumnsDynamic.store.ColumnStore');
         var columnsArray = [];
         columns.each(function(record,id){
             columnsArray.push({text:record.data.text, dataIndex: record.data.dataIndex, width: record.data.width});

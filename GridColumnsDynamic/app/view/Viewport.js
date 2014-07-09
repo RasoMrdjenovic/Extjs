@@ -4,10 +4,10 @@ Ext.require([
     'Ext.tip.*',
     'Ext.panel.*'
 ]);
-Ext.define('TreeToGrid.view.Viewport', {
+Ext.define('GridColumnsDynamic.view.Viewport', {
     extend: 'Ext.Viewport',
     title:'Tree to Grid Drag & Drop',
-    requires: ['TreeToGrid.view.MainPanel','TreeToGrid.view.LeftPanel'],
+    requires: ['GridColumnsDynamic.view.MainPanel','GridColumnsDynamic.view.LeftPanel'],
     layout: 'border',
     alias:'widget.viewport',
     
